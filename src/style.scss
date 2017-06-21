@@ -1,0 +1,16 @@
+@import 'variables'; 
+
+body{
+	background-color: $light;	
+	color: $dark;
+}
+header{
+	background-color: $primary;
+	color: $light;
+}
+a{
+	color: $accent;
+	&:hover{
+		color: $highlight;
+	}
+}
