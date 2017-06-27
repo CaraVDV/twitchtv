@@ -1,16 +1,85 @@
 @import 'variables'; 
 
+html,body{
+	max-width: 100vw;
+	overflow-x: hidden;
+}
+
 body{
-	background-color: $light;	
-	color: $dark;
+	background-color: $faded;	
+	background: url('bgtile.png') fixed;
+	background-size: 90px;
+	color: $light;
+	font-size: 100%;
+	margin: 0;
+	padding: 0;
 }
 header{
+	display: flex;
+	align-items: center;
 	background-color: $primary;
 	color: $light;
+	width: 100%;
+	height: 3em;
+	position: fixed;
+	box-shadow: 0 0 10px rgba(0,0,0,0.3), 0 0 5px rgba(0,0,0,0.3);
 }
-a{
-	color: $accent;
-	&:hover{
-		color: $highlight;
+main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 4em;
+}
+.logo{
+	display: flex;
+	align-items: center;
+	flex: 1 1 auto;
+	height: 2.5em;
+	margin-left: 1em;
+	& #OW{
+		height: 2.3em;
 	}
+	& #twitch{
+		height: 2.8em;
+	}
+}
+.switch{
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	width: 6em;
+	background: none;
+	height: 100%;
+	border: none;
+	color: $light;
+	border-left: 1px solid $dark;
+	&:active{
+		background-color: $dark;
+	}
+}
+.circ{
+	width: 8px;
+	height: 8px;
+	border-radius: 50%;
+	&.on{
+		background-color: $online;
+	}
+	&.off{
+		background-color: $offline;
+	}
+	&.grey{
+		background-color: $faded;
+	}
+}
+.top{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 80%;
+	max-width: 600px;
+	background-color: $dark;
+	border: 1px solid black;
+}
+#title{
+	width: 90%;
 }

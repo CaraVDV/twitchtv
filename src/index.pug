@@ -14,4 +14,23 @@ html(lang="en")
 
 	//////////////////// End Head ////////////////////////////
 	body
+		header
+			.logo
+				img(src="dist/ow-small.png" id="OW")
+				img(src="dist/logo-small.png" id="twitch")
+			button.switch
+				.circ.on 
+				| Online
+			button.switch
+				.circ.off
+				| Offline
+			button.switch
+				.circ.grey
+				| All
 		main
+			.top
+				img(src="dist/ow-logo.png" id="title")
+			.ul
+				.li >	Individual Channels
+				.li > Team Channels
+				.li > Tournament Channels
